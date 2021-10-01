@@ -1,0 +1,40 @@
+<!DOCTYPE >
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>okaeri</title>
+		<link rel="stylesheet" type="text/css" href="NewLogin.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		</head>
+	<body>
+		<div id="login_box">
+			<h2> 今日何食べる?</h2>
+			<div id="form">
+				<div id="input_box">
+					<i class="fa fa-lemon-o" aria-hidden="true"></i>
+					<input type="text" placeholder="敲一下空格" >
+				</div>
+				<div id="input_box">
+					<i class="fa fa-cutlery  aria-hidden="true"></i>
+					<input type="text" placeholder="获取今日菜单">
+				</div>
+			</div>
+			<!-- 出现菜名的按钮位置 -->
+			<button > </button>
+			<div id="sign-in">
+				<a href="#">食事を楽しんで~</a>
+			</div>
+		</div>
+		<script>
+			var foodnames = [
+				"芒果鸡肉沙拉", "蚝油生菜", "五香牛肉", "洋葱牛肉三明治", "日式盐面包", "酸汤虾", "紫菜鸡蛋虾饼三明治", "蒜香奶油虾仁意面", "玉米浓汤", "虾仁豆腐煲",
+				"南瓜奶酪贝果", "蒜香排骨", "烤土豆", "脆皮鸡腿", "·腊肠炖豆腐", "味噌猪肉汤面", "咖喱鱼丸粗面", "抹茶红豆年糕汤", "培根年糕串", "番茄牛肉汤",
+				"虾蔬烘蛋","番茄炖牛腩","葱油鸡","红烧肉","藤椒手撕鸡","糖醋排骨","青椒酿肉"
+			];
+			document.addEventListener("keydown", function(e) {
+			document.querySelector('button').textContent = 
+			foodnames[Math.floor(Math.random() * 100) % foodnames.length];
+			})
+		</script>
+	</body>
+</html>
